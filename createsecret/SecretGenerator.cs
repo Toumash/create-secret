@@ -29,10 +29,11 @@ namespace createsecret
                 return;
             }
 
+            Console.Write("processing");
             var secretLink = GenerateSecret(secret_url, secret);
-            Console.Write("processing...");
+            Console.Write(" . ");
             var shortenLink = Shorten(bitly_token, secretLink);
-            Console.WriteLine("ok\n" + shortenLink);
+            Console.WriteLine(". ok\n" + shortenLink);
         }
 
         private static string GenerateSecret(string secret_url, string secret)
